@@ -33,7 +33,8 @@ const Login = () => {
       });
       else {
         signIn(json.data);
-        router.replace("/(app)/(admintabs)");
+        if (json.data.user.admin) router.replace("/(app)/(admintabs)");
+        else router.replace("/(app)/(usertabs)");
       }
     })
     .catch(error => {

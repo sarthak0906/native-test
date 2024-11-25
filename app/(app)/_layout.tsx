@@ -24,15 +24,16 @@ export default function AppLayout() {
   let user;
   if (session){
     try {
-      let s = JSON.parse(session)
+      let s = session
       user = s?.user;
     } catch (error) {
       user = null;
     }
   }
+  console.log("<<<<<<<<<<<<", user);
 
   // This layout can be deferred because it's not the root layout.
-  if (user){
+  if (user && user.admin && user.email == "admin@admin.co"){
     return (
       <Stack>
         <Stack.Screen name="(admintabs)" options={{ headerShown: false }} />

@@ -17,7 +17,6 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          headerShown: false,
           title: 'Home',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'home' : 'home'} color={color} />
@@ -25,29 +24,8 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="createPoll"
-        options={{
-          headerShown: false,
-          title: 'create Poll',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'filter' : 'filter-outline'} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="createuser"
-        options={{
-          headerShown: false,
-          title: 'create User',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'image' : 'image-outline'} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
         name="profile"
         options={{
-          headerShown: false,
           title: 'Profile',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
