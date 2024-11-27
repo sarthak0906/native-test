@@ -10,6 +10,7 @@ import Upcoming from '../../../components/upcoming'; // Import Upcoming modal co
 import Previous from '../../../components/previous';
 import Chart from '../../../components/chart'; // Import Chart component
 import { useSession } from '../../../ctx';
+import Nav from '@/components/nav';
 
 const { width, height } = Dimensions.get('window'); // For responsiveness
 
@@ -53,6 +54,7 @@ const AdminDashboard = () => {
   return (
     <View style={styles.outerContainer}>
       {/* Step 1: Activity Log Text */}
+      <Nav />
       <Text style={styles.activityLogText}>Activity Log</Text>
 
       {/* Step 2: Responsive Container with Two Cards */}
@@ -198,7 +200,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginTop: height * 0.05, // 5% from the top
+    marginTop: height * 0.10, // 5% from the top
   },
   container: {
     backgroundColor: '#e7f2f8',
